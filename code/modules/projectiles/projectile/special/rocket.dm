@@ -43,3 +43,39 @@
 	else
 		explosion(target, 0, 0, 2, 4)
 	return TRUE
+
+/obj/item/projectile/bullet/a45mm
+	name ="light rocket"
+	desc = "USE A WEEL GUN"
+	icon_state= "atrocket"
+	damage = 30
+	var/anti_armour_damage = 125
+	armour_penetration = 60
+	dismemberment = 80
+
+/obj/item/projectile/bullet/a84mm/on_hit(atom/target, blocked = FALSE)
+	..()
+	explosion(target, -1, 1, 2, 1, 0, flame_range = 2)
+
+	if(ismecha(target))
+		var/obj/mecha/M = target
+		M.take_damage(anti_armour_damage)
+	if(issilicon(target))
+		var/mob/living/silicon/S = target
+		S.take_overall_damage(anti_armour_damage*0.75, anti_armour_damage*0.25)
+	return TRUE
+
+/obj/item/projectile/bullet/srmrocket
+	name ="SRM-8 Rocket"
+	desc = "Boom."
+	icon_state = "missile"
+	damage = 30
+	ricochets_max = 0 //it's a MISSILE
+
+/obj/item/projectile/bullet/srmrocket/on_hit(atom/target, blocked=0)
+	..()
+	if(!isliving(target)) //if the target isn't alive, so is a wall or something
+		explosion(target, 0, 1, 2, 4)
+	else
+		explosion(target, 0, 0, 2, 4)
+	return TRUE

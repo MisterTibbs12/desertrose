@@ -238,18 +238,6 @@
 	damage = 28
 	armour_penetration = 15
 
-/obj/item/projectile/beam/laser/ultra_pistol
-	name = "laser beam"
-	damage = 40
-	armour_penetration = 15
-	irradiate = 200
-
-/obj/item/projectile/beam/laser/ultra_rifle
-	name = "laser beam"
-	damage = 45
-	armour_penetration = 20
-	irradiate = 200
-
 /obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
 	name = "rapid-fire laser beam"
 	damage = 12
@@ -279,16 +267,6 @@
 	damage_type = BURN
 	damage = 42
 	armour_penetration = 12
-	flag = "laser" //checks vs. energy protection
-	eyeblur = 0
-	is_reflectable = TRUE
-
-/obj/item/projectile/plasmacarbine //Plasma carbine
-	name = "plasma bolt"
-	icon_state = "plasma_clot"
-	damage_type = BURN
-	damage = 45
-	armour_penetration = 15
 	flag = "laser" //checks vs. energy protection
 	eyeblur = 0
 	is_reflectable = TRUE
@@ -344,3 +322,83 @@
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/Corellian
+	name = "laser beam"
+	damage = 30
+	armour_penetration = 24
+	icon_state = "Corellian"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/Imperial
+	name = "laser beam"
+	damage = 30
+	armour_penetration = 39
+	icon_state = "Imperial"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/bowcasterbolt
+	name = "laser beam"
+	damage = 65
+	armour_penetration = 4
+	icon_state = "Imperial"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/Repeater
+	name = "laser beam"
+	damage = 20
+	armour_penetration = 12
+	icon_state = "Repeater"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/avb
+	name = "laser beam"
+	damage = 70
+	armour_penetration = 100
+	icon_state = "gaussstrong"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_YELLOW
+
+/obj/item/projectile/beam/laser/pistolweak
+	name = "laser beam"
+	damage = 25
+	armour_penetration = 2
+	icon_state = "Imperial"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/Sonic
+	name = "Sonic blast"
+	damage = 42
+	armour_penetration = 0
+	icon_state = "Sonic"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/long
+	name = "laser beam"
+	damage = 32
+	armour_penetration = 40
+	icon_state = "Imperial"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_RED
+
+/obj/item/projectile/beam/laser/lhs
+	name = "laser beam"
+	damage = 30
+	armour_penetration = 2
+	icon_state = "Imperial"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_RED
+
+/obj/item/projectile/beam/laser/Explosive
+	name = "laser beam"
+	damage = 42
+	armour_penetration = 60
+	icon_state = "Imperial"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_color = LIGHT_COLOR_RED
