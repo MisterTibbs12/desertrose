@@ -29,7 +29,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 19
-	grow_chance = 45
+	grow_chance = 0
 
 /area/f13/forest
 	name = "Forest"
@@ -42,7 +42,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
-	grow_chance = 75
+	grow_chance = 5
 
 /area/f13/ruins
 	name = "Ruins"
@@ -74,6 +74,24 @@
 //	ambientmusic = list('sound/f13music/fo2_tunnels.ogg','sound/f13music/fo2_ruins.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/f13ambience/ambigen_3.ogg','sound/f13ambience/ambigen_4.ogg','sound/f13ambience/ambigen_5.ogg', \
 	'sound/f13ambience/ambigen_6.ogg','sound/f13ambience/ambigen_7.ogg','sound/f13ambience/ambigen_8.ogg','sound/f13ambience/ambigen_9.ogg')
+	environment = 2
+	grow_chance = 5
+
+/area/f13/cantina
+	name = "Cantina"
+	icon_state = "building"
+	environment = 2
+	grow_chance = 5
+
+/area/f13/repcom
+	name = "Republic Communications"
+	icon_state = "building"
+	environment = 2
+	grow_chance = 5
+
+/area/f13/remcom
+	name = "Remnant Communications"
+	icon_state = "building"
 	environment = 2
 	grow_chance = 5
 
@@ -479,3 +497,24 @@
 	blob_allowed = 0
 	environment = 5
 	grow_chance = 5
+
+/area/f13/lava
+	name = "Lava"
+	icon_state = "vaulttec"
+//	ambience_area =  list('sound/f13ambience/vaulttec_vault.ogg')
+//	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/f13ambience/ambigen_14.ogg','sound/f13effects/steam_short.ogg','sound/f13effects/steam_long.ogg')
+
+/area/f13/mortsurface
+	name = "Mortooine Surface"
+	icon_state = "wasteland"
+//	ambience_area =  list('sound/f13ambience/wasteland.ogg')
+//	ambientmusic = list('sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_world.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/battle_1.ogg','sound/f13ambience/battle_2.ogg','sound/f13ambience/battle_3.ogg', \
+	'sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg','sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg')
+	outdoors = 1
+	open_space = 1
+	blob_allowed = 0
+	environment = 19
+	grow_chance = 0
