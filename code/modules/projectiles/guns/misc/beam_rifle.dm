@@ -441,23 +441,23 @@
 	name = "particle beam"
 	icon = null
 	hitsound = 'sound/effects/explosion3.ogg'
-	damage = 0				//Handled manually.
+	damage = 97				//Handled manually.
 	damage_type = BURN
 	flag = "energy"
 	range = 150
 	jitter = 10
 	var/obj/item/gun/energy/beam_rifle/gun
-	var/structure_pierce_amount = 0				//All set to 0 so the gun can manually set them during firing.
+	var/structure_pierce_amount = 2				//All set to 0 so the gun can manually set them during firing.
 	var/structure_bleed_coeff = 0
-	var/structure_pierce = 0
+	var/structure_pierce = 8
 	var/do_pierce = TRUE
-	var/wall_pierce_amount = 0
-	var/wall_pierce = 0
+	var/wall_pierce_amount = 2
+	var/wall_pierce = 2
 	var/wall_devastate = 0
 	var/aoe_structure_range = 0
 	var/aoe_structure_damage = 0
-	var/aoe_fire_range = 0
-	var/aoe_fire_chance = 0
+	var/aoe_fire_range = 1
+	var/aoe_fire_chance = 2
 	var/aoe_mob_range = 0
 	var/aoe_mob_damage = 0
 	var/impact_structure_damage = 0
@@ -593,3 +593,4 @@
 /obj/item/projectile/beam/beam_rifle/hitscan/aiming_beam/on_hit()
 	qdel(src)
 	return FALSE
+

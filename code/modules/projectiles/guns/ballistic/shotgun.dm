@@ -117,11 +117,12 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
 
+/*TODO sprite, ignore for now
 /obj/item/gun/ballistic/shotgun/musket
-	name = "Rifled Musket"
-	desc = "An old style rifled musket chambered in .58, probably made by some master craftsman or something. The design looks very antiquated, but trust me, you do not want to get shot by one of these."
-	icon_state = "1851enfield"
-	item_state = "1851enfield"
+	name = "Musket"
+	desc = "An antique looking musket."
+	icon_state = "moistnugget"
+	item_state = "moistnugget"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/musket
 	var/bolt_open = FALSE
@@ -129,11 +130,11 @@
 	nocase = TRUE
 	knife_x_offset = 27
 	knife_y_offset = 13
-	fire_delay = 20
+	fire_delay = 100
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-
+TODO sprite, ignore for now*/
 
 //BB gun
 /obj/item/gun/ballistic/shotgun/bb
@@ -334,7 +335,7 @@
 	scopestate = "AEP7_scope"
 	scope_x_offset = 8
 	scope_y_offset = 19
-	can_bayonet = TRUE
+	can_bayonet = TRUE	
 	bayonetstate = "trenchgun"
 	knife_x_offset = 23
 	knife_y_offset = 14
@@ -388,8 +389,6 @@
 	weapon_weight = WEAPON_HEAVY
 	can_scope = TRUE
 
-
-
 /obj/item/gun/ballistic/shotgun/remington/attackby(obj/item/A, mob/user, params)
 	..()
 	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
@@ -432,38 +431,6 @@
 			return
 	else
 		..()
-
-/obj/item/gun/ballistic/shotgun/ww2rifle
-	name = "\improper ancient rifle"
-	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch."
-	icon_state = "kar98"
-	item_state = "308"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
-	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	fire_delay = 5
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	can_scope = TRUE
-	extra_damage = 10
-	extra_penetration = 10
-
-/obj/item/gun/ballistic/shotgun/ww2rifle/scoped
-	name = "\improper scoped ancient rifle"
-	desc = "An ancient military rifle in use over 100 years ago, chambered in .308 and packing an additional punch. Now with a scope."
-	icon_state = "kar98scope"
-	item_state = "308"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/kar98
-	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	fire_delay = 5
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	can_scope = FALSE
-	extra_damage = 10
-	extra_penetration = 10
-
 
 //Anti-Materiel Rifle (NCR)
 /obj/item/gun/ballistic/shotgun/antimateriel
@@ -523,7 +490,7 @@
 	pump_sound = 'sound/f13weapons/cowboyrepeaterreload.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 4
+	fire_delay = 6
 	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/cowboy/scoped
@@ -539,7 +506,7 @@
 	zoom_out_amt = 13
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 6
+	fire_delay = 8
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush
@@ -551,11 +518,11 @@
 	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 4
+	fire_delay = 6
 	can_scope = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped
-	name = "scoped brush gun (standard)"
+	name = "scoped brush gun"
 	desc = "A short lever action rifle chambered in the heavy 45-70 round. Issued to NCR Veteran Rangers in the absence of heavier weaponry."
 	icon_state = "scopedbrushgun"
 	item_state = "scopedbrushgun"
@@ -566,82 +533,8 @@
 	zoom_out_amt = 13
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 6
+	fire_delay = 8
 	can_scope = FALSE
-	extra_penetration = -5
-	extra_damage = -5
-
-/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/low
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
-
-/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/mid
-	name = "scoped brush gun (improved)"
-	extra_damage = 5
-	extra_penetration = 5
-	fire_delay = 5
-
-/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/mid/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/mid
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
-
-/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/high
-	name = "scoped brush gun (masterwork)"
-	extra_damage = 12
-	extra_damage = 12
-	fire_delay = 4
-
-/obj/item/gun/ballistic/shotgun/automatic/hunting/brush/scoped/high/attackby(obj/item/W, mob/user, params)
-	if(istype(W,/obj/item/screwdriver))
-		var/obj/item/A = new /obj/item/prefabs/complex/screw
-		var/obj/item/B = new /obj/item/prefabs/complex/trigger
-		var/obj/item/C = new /obj/item/prefabs/complex/bolt/simple
-		var/obj/item/D = new /obj/item/prefabs/complex/action/simple
-		var/obj/item/E = new /obj/item/prefabs/complex/barrel/m4570
-		var/obj/item/F = new /obj/item/prefabs/complex/stock/low
-		var/obj/item/G = new /obj/item/prefabs/complex/complexWeaponFrame/high
-		A.forceMove(usr.loc)
-		B.forceMove(usr.loc)
-		C.forceMove(usr.loc)
-		D.forceMove(usr.loc)
-		E.forceMove(usr.loc)
-		F.forceMove(usr.loc)
-		G.forceMove(usr.loc)
-		qdel(src)
-		to_chat(usr,"You dissasemble the [src].")
-	. = ..()
 
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "winchester widowmaker"

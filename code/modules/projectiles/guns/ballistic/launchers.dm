@@ -2,8 +2,8 @@
 //Put handheld rocket launchers here if someone ever decides to make something so hilarious ~Paprika
 
 /obj/item/gun/ballistic/revolver/grenadelauncher//this is only used for underbarrel grenade launchers at the moment, but admins can still spawn it if they feel like being assholes
-	desc = "A break-operated grenade launcher."
-	name = "M79 grenade launcher"
+	desc = "A concussion launcher firing Sorosuub LXR-6 grenades."
+	name = "Concussion Launcher"
 	icon_state = "dshotgun-sawn"
 	item_state = "gun"
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
@@ -125,3 +125,19 @@
 		to_chat(user, "<span class='notice'>You load [num_loaded] spear\s into \the [src].</span>")
 		update_icon()
 		chamber_round()
+
+/obj/item/gun/ballistic/automatic/mrl
+	desc = "A multiple missile launcher, issued to jet troopers. Intended for use against Remnant armoured forces."
+	name = "A-6L MRL"
+	icon_state = "mrl"
+	item_state = "rocketlauncher"
+	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher
+	fire_sound = 'sound/weapons/rocketlaunch.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	can_suppress = FALSE
+	burst_size = 1
+	fire_delay = 25
+	select = 0
+	actions_types = list()
+	casing_ejector = FALSE
+	weapon_weight = WEAPON_HEAVY
