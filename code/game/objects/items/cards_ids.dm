@@ -449,21 +449,6 @@ update_label("John Doe", "Clowny")
 	icon_state = "holodogtag"
 	id_type = "ID tags"
 
-/obj/item/card/id/selfassign/attack_self(mob/user)
-    if(isliving(user))
-        var/mob/living/living_user = user
-        if(alert(user, "Action", "Agent ID", "Show", "Forge") == "Forge")
-            registered_name = living_user.real_name
-            assignment = living_user.job
-            update_label()
-            to_chat(user, "<span class='notice'>You successfully forge the ID card.</span>")
-            return
-    ..()
-
-/obj/item/card/id/selfassign
-	icon_state = "silver"
-	item_state = "silver_id"
-	desc = "A rewritable card that allows you to put your name and assignment on it."
 
 /obj/item/card/id/dogtag/deputy
 	name = "deputy's badge"
@@ -612,8 +597,6 @@ update_label("John Doe", "Clowny")
 	desc = "A golden disc awarded to the elite hunters of the legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
 	id_type = "venator medallion"
-	assignment = "Venator"
-
 
 /obj/item/card/id/dogtag/legpriest
 	name = "priestess medallion"
@@ -664,24 +647,34 @@ update_label("John Doe", "Clowny")
 	icon_state = "brokenholodog"
 	item_state = "brokenholodog"
 
-/obj/item/card/id/khantattoo
-	name = "Great Khan tattoo"
-	desc = "A tattoo of the symbol of the Great Khans."
-	icon_state = "skin"
-	item_state = "skin"
-	id_type = "gang tattoo"
-	item_flags = NODROP
-	access = list(ACCESS_KHAN)
+/obj/item/card/id/dogtag/republicjt
+	name = "ID Tag"
+	desc = "A small tag showing identification."
+	icon_state = "ncrdogtagrecruit"
 
+/obj/item/card/id/crewman
+	name = "Crewman ID"
+	desc = "A golden card required for the operation of the Remnant's vehicles."
+	icon_state = "gold"
+	item_state = "gold_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	access = list(ACCESS_REM)
 
-/* Tribal Tags
-*/
+/obj/item/card/id/pilot
+	name = "Pilot ID"
+	desc = "A golden card required for the operation of the Republic's vehicles."
+	icon_state = "gold"
+	item_state = "gold_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	access = list(ACCESS_REP)
 
-/obj/item/card/id/tribetattoo
-	name = "Tattoo of the machine spirits"
-	desc = "A tattoo depicting the five machine spirits in harmony."
-	icon_state = "talisman"
-	item_state = "talisman"
-	id_type = "tribe tattoo"
-	item_flags = NODROP
-	access = list(ACCESS_TRIBE)
+/obj/item/card/id/gutter
+	name = "Gutter ID"
+	desc = "A card issued to the Gutters."
+	icon_state = "gold"
+	item_state = "gold_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	access = list(ACCESS_GUT)
