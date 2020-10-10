@@ -485,7 +485,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	icon_state = "NCR Trooper"
 
 /obj/effect/landmark/start/f13/ncrrecruit
-	name = "NCR Recruit"
+	name = "NCR Assistant"
 	icon_state = "NCR Recruit"
 
 /obj/effect/landmark/start/f13/ncrveteranranger
@@ -696,6 +696,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Wastelander"
 	icon_state = "Wastelander"
 
+
+/obj/effect/landmark/start/f13/mosmora
+	name = "Mos Mora Civilian"
+	icon_state = "Wastelander"
+
+
 /obj/effect/landmark/start/f13/raider
 	name = "Outlaw"
 	icon_state = "Raider"
@@ -703,6 +709,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/pusher
 	name = "Great Khan"
 	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/pusher
+	name = "Gutter Ganger"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/trooper
+	name = "Republic Trooper"
+	icon_state = "NCR Recruit"
 
 /obj/effect/landmark/start/f13/preacher
 	name = "Preacher"
@@ -751,25 +765,62 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	icon_state = "Villager"
 
 //Followers of the Apocalypse
-/obj/effect/landmark/start/f13/followersadministrator
-	name = "Followers Administrator"
+/obj/effect/landmark/start/f13/leadpractitioner
+	name = "Lead Practitioner"
+	icon_state = "Lead_Practitioner"
 
-/obj/effect/landmark/start/f13/followersdoctor
-	name = "Followers Doctor"
+/obj/effect/landmark/start/f13/practitioner
+	name = "Practitioner"
+	icon_state = "Practitioner"
 
 /obj/effect/landmark/start/f13/followersguard
 	name = "Followers Guard"
+	icon_state = "Followers_Guard"
 
 /obj/effect/landmark/start/f13/followersvolunteer
 	name = "Followers Volunteer"
+	icon_state = "Followers_Volunteer"
 
-/obj/effect/landmark/start/f13/followersscientist
-	name = "Followers Scientist"
+/obj/effect/landmark/start/f13/trooper
+	name = "New Republic Trooper"
+	icon_state = "NCR Recruit"
 
-/obj/effect/landmark/start/f13/hunter
-    name = "Hunter"
-    icon_state = "Hunter"
+/obj/effect/landmark/start/f13/nwtrooper
+	name = "New Republic Trooper"
+	icon_state = "NCR Recruit"
 
-/obj/effect/landmark/start/f13/Hhunter
-    name = "Head Hunter"
-    icon_state = "Head Hunter"
+/obj/effect/landmark/start/f13/jettrooper
+	name = "New Republic Jet-Trooper"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/sergeant
+	name = "New Republic Sergeant"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/captain
+	name = "New Republic Captain"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/remnantcaptain
+	name = "Remnant Officer"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/remnantsergeant
+	name = "Remnant Sergeant"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/remnantcrew
+	name = "Remnant Crewman"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/remnanttrooper
+	name = "Remnant Stormtrooper"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/boss
+	name = "The Boss"
+	icon_state = "NCR Recruit"
+
+/obj/effect/landmark/start/f13/pilot
+	name = "New Republic Pilot"
+	icon_state = "NCR Recruit"

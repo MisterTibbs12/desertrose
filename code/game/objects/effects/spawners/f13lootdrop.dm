@@ -333,7 +333,7 @@
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice,
-				/obj/item/clothing/head/helmet/f13/rangerbroken
+				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/riotpolice
 				)
 	var/loot3 = list(
 				/obj/item/clothing/suit/armor/f13/combat/mk2,
@@ -434,7 +434,7 @@
 				/obj/item/defibrillator/compact/combat/loaded,
 				/obj/item/reagent_containers/hypospray/combat,
 				/obj/item/clothing/glasses/hud/health/night,
-				///obj/item/disk/surgery/revival
+				/obj/item/disk/surgery/revival
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
@@ -942,8 +942,8 @@
     loot = list(
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier1 = 80,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier2 = 14,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 4,
-            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 1,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier3 = 3,
+            /obj/effect/spawner/lootdrop/f13/weapon/gun/tier4 = 2,
             /obj/effect/spawner/lootdrop/f13/weapon/gun/tier5 = 1
             )
 
@@ -1116,55 +1116,7 @@
 	lootcount = 4
 
 /obj/effect/spawner/lootdrop/f13/seedspawner/Initialize(mapload) // This will spawn gatfruit sometimes.
-	loot = list(/obj/item/seeds/ambrosia,
-		            /obj/item/seeds/apple,
-		            /obj/item/seeds/banana,
-		            /obj/item/seeds/cotton,
-		            /obj/item/seeds/berry,
-		            /obj/item/seeds/poppy/broc,
-					/obj/item/seeds/cabbage,
-					/obj/item/seeds/carrot,
-					/obj/item/seeds/carrot/parsnip,
-					/obj/item/seeds/cherry,
-					/obj/item/seeds/chanter,
-					/obj/item/seeds/chili,
-					/obj/item/seeds/cocoapod,
-					/obj/item/seeds/coffee,
-					/obj/item/seeds/corn,
-					/obj/item/seeds/eggplant,
-					/obj/item/seeds/grape,
-					/obj/item/seeds/grass,
-					/obj/item/seeds/lemon,
-					/obj/item/seeds/lime,
-					/obj/item/seeds/onion,
-					/obj/item/seeds/orange,
-					/obj/item/seeds/rainbow_bunch,
-					/obj/item/seeds/pineapple,
-					/obj/item/seeds/potato,
-					/obj/item/seeds/poppy,
-					/obj/item/seeds/pumpkin,
-					/obj/item/seeds/wheat/rice,
-					/obj/item/seeds/soya,
-					/obj/item/seeds/sugarcane,
-					/obj/item/seeds/sunflower,
-					/obj/item/seeds/tea,
-					/obj/item/seeds/tobacco,
-					/obj/item/seeds/tomato,
-					/obj/item/seeds/tower,
-					/obj/item/seeds/watermelon,
-					/obj/item/seeds/wheat,
-					/obj/item/seeds/whitebeet,
-					/obj/item/seeds/xander,
-					/obj/item/seeds/mutfruit,
-					/obj/item/seeds/amanita,
-		            /obj/item/seeds/glowshroom,
-		            /obj/item/seeds/liberty,
-		            /obj/item/seeds/nettle,
-					/obj/item/seeds/plump,
-					/obj/item/seeds/reishi,
-					/obj/item/seeds/cannabis,
-					/obj/item/seeds/starthistle,
-					/obj/item/seeds/random)
+	loot = childtypesof(/obj/item/seeds)
 	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/foodspawner
@@ -1432,77 +1384,22 @@
 	/obj/item/book/granter/trait/gunsmith_three = 10,
 	/obj/item/book/granter/trait/gunsmith_four = 10)
 
-/obj/effect/spawner/lootdrop/f13/blueprintLow
-	name = "gun comps spawner"
+/obj/effect/spawner/lootdrop/f13/blueprint //ballistics only for now
+	name = "blueprint-tier item spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		//obj/item/blueprint/weapon/AEP7,
-		//obj/item/blueprint/weapon/lever_action,
-		//obj/item/blueprint/weapon/kar98,
-		/obj/item/prefabs/complex/action/auto,
-		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570,
-		/obj/item/prefabs/complex/barrel/m762
-	)
-/obj/effect/spawner/lootdrop/f13/blueprintMid
-	name = "blueprint-tier(Mid) item spawner"
-	icon_state = "blueprint_loot"
-	lootcount = 1
-	loot = list(
+		///obj/item/blueprint/misc/stim,
+		///obj/item/blueprint/misc/superstims,
+		/obj/item/blueprint/weapon/R91,
 		/obj/item/blueprint/weapon/marksmanrifle,
-		/obj/item/blueprint/weapon/plasmapistol,
-		/obj/item/blueprint/weapon/brush,
-		//obj/item/blueprint/weapon/grease_gun,
-		///obj/item/blueprint/weapon/pps,
-		/obj/item/blueprint/weapon/mg34
-	)
-/obj/effect/spawner/lootdrop/f13/blueprintMidLimited
-	name = "blueprint-tier(MidLimited) item spawner"
-	icon_state = "blueprint_loot"
-	lootcount = 1
-	loot = list(
-		/obj/item/blueprint/weapon/marksmanrifle/limited,
-		/obj/item/blueprint/weapon/plasmapistol/limited,
-		/obj/item/blueprint/weapon/brush/limited,
-		//obj/item/blueprint/weapon/grease_gun/limited,
-		/obj/item/blueprint/weapon/mg34/limited,
-		/obj/item/prefabs/complex/action/auto,
-		/obj/item/prefabs/complex/bolt/high,
-		/obj/item/prefabs/complex/barrel/m4570
-	)
-/obj/effect/spawner/lootdrop/f13/blueprintHigh
-	name = "blueprint-tier(High) item spawner"
-	icon_state = "blueprint_loot"
-	lootcount = 1
-	loot = list(
-		//obj/item/blueprint/weapon/R91,
-		/obj/item/blueprint/weapon/sniper,
-		/obj/item/blueprint/weapon/breacher,
-		/obj/item/blueprint/weapon/lmg,
-		/obj/item/blueprint/weapon/R82,
-		/obj/item/blueprint/weapon/deagle
-	)
-/obj/effect/spawner/lootdrop/f13/blueprintVHigh
-	name = "blueprint-tier(VHigh) item spawner"
-	icon_state = "blueprint_loot"
-	lootcount = 1
-	loot = list(
-		/obj/item/blueprint/weapon/plasmarifle,
+		/obj/item/blueprint/weapon/smg10mm,
 		/obj/item/blueprint/weapon/AER9,
-		/obj/item/blueprint/weapon/AM_rifle,
-		/obj/item/blueprint/weapon/city_killer
-		//obj/item/blueprint/weapon/rangemaster
-	)
-/obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics
-	name = "blueprint-tier(VHighBallistics) item spawner"
-	icon_state = "blueprint_loot"
-	lootcount = 1
-	loot = list(
-		/obj/item/blueprint/weapon/AM_rifle,
-		/obj/item/blueprint/weapon/city_killer,
-		//obj/item/blueprint/weapon/rangemaster,
-		/obj/item/blueprint/weapon/bozar
+		/obj/item/blueprint/weapon/AEP7,
+		/obj/item/blueprint/weapon/plasmapistol,
+		/obj/item/blueprint/weapon/plasmarifle,
+		/obj/item/gun/energy/laser/rcw
+	//	/obj/item/blueprint/armor/combat
 	)
 
 /obj/effect/spawner/lootdrop/f13/advcrafting
