@@ -107,6 +107,14 @@
 	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 0)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/weapon,/obj/item/ammo_box,/obj/item/ammo_casing)
 
+/obj/item/clothing/suit/f13/flightjumpsuit
+	name = "Starfighter pilot suit"
+	desc = "An orange jumpsuit, found in use by the New Republic."
+	icon_state = "Fightersuit"
+	item_state = "Fightersuit"
+	body_parts_covered = CHEST|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 20, laser = 25, energy = 20, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 0)
+
 /obj/item/clothing/suit/f13/banker
 	name = "bankers tailcoat"
 	desc = "A long black jacket, finely crafted black leather and smooth finishings make this an extremely fancy piece of rich-mans apparel."
@@ -272,7 +280,7 @@
 	name = "deathclaw cloak"
 	icon_state = "goliath_cloak"
 	desc = "A staunch, practical cloak made out of sinew and skin from the fearsome deathclaw."
-	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/claymore, /obj/item/twohanded/spear)
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/pickaxe, /obj/item/twohanded/spear, /obj/item/twohanded/bonespear, /obj/item/gun)
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/goliath
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -346,23 +354,4 @@
 	armor = list("melee" = 70, "bullet" = 30, "laser" = 50, "energy" = 40, "bomb" = 70, "bio" = 60, "rad" = 50, "fire" = 100, "acid" = 100)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-
-/obj/item/clothing/suit/hooded/cloak/hhunter
-	name = "Razorclaw armour"
-	icon_state = "rcarmour"
-	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw."
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/resonator, /obj/item/mining_scanner, /obj/item/t_scanner/adv_mining_scanner, /obj/item/gun/energy/kinetic_accelerator, /obj/item/pickaxe, /obj/item/twohanded/spear)
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/hhunter
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-
-/obj/item/clothing/head/hooded/cloakhood/hhunter
-	name = "Razorclaw helm"
-	icon_state = "rchelmet"
-	desc = "The skull of a legendary deathclaw."
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-	heat_protection = HEAD
 	resistance_flags = FIRE_PROOF | ACID_PROOF

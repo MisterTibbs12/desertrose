@@ -144,14 +144,6 @@
 	item_color = "vetranger"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 40, "fire" = 30, "acid" = 70)
 
-/obj/item/clothing/under/f13/rustic
-	name = "rustic outfit"
-	desc = "Simple rustic clothes for your day to day life in the wastes."
-	icon_state = "vetranger"
-	item_state = "rustictown"
-	item_color = "rustictown"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
-
 /obj/item/clothing/under/f13/sheriff
 	name = "sheriff outfit"
 	desc = "The symbol of law and civilization, a black vest over a well starched white shirt."
@@ -412,12 +404,6 @@
 	icon_state = "chiefrags"
 	item_state = "chiefrags"
 
-/obj/item/clothing/under/f13/tribe_Hhunter
-	name = "Razorclaw robes"
-	desc = "Tanned leather robes, decorated with bones of deathclaws and marked with the great machine spirit of earth."
-	icon_state = "hhunterrags"
-	item_state = "hhunterrags"
-
 /obj/item/clothing/under/f13/tribe_shaman
 
 	name = "tribal shaman robes"
@@ -461,8 +447,6 @@
 	icon_state = "nato_uniform"
 	item_state = "nato_uniform"
 	item_color = "nato_uniform"
-
-
 
 //Prom Dress
 
@@ -583,6 +567,22 @@
 	icon_state = "bdu"
 	item_state = "xenos_suit"
 	item_color = "bdu"
+	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/swrepcaptain //WalterJe military standarts.
+	name = "Captain's uniform"
+	desc = "A uniform with a badge denoting the rank of captain."
+	icon_state = "captainsuit2"
+	item_state = "captainsuit2"
+	item_color = "captainsuit2"
+	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/swremofficer //WalterJe military standarts.
+	name = "Officer's uniform"
+	desc = "A uniform used by Imperial officers."
+	icon_state = "remofficer"
+	item_state = "remofficer"
+	item_color = "remofficer"
 	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/dbdu
@@ -843,14 +843,6 @@
 	icon_state = "combat"
 	item_state = "bl_suit"
 	item_color = "combat"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
-/obj/item/clothing/under/f13/guner
-	name = "combat uniform"
-	desc = "An ancient combat uniform, that went out of use around the time of the Great War."
-	icon_state = "GunnerPlates"
-	item_state = "GunnerPlates"
-	item_color = "GunnerPlates"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/combat/militia
@@ -1115,3 +1107,21 @@
 	desc = "A harness made out of a number of black belts sewn together end on end to form a coiling piece of clothing. A symbol in red has been painted on the front, and a pair of hide pants go with it."
 	icon_state = "raven_harness"
 	item_state = "raven_harness"
+
+/obj/item/clothing/under/f13/spaceship/officer
+	name = "officer uniform"
+	desc = "The insignia on this uniform tells you that this uniform belongs to some sort of officer."
+	icon_state = "spaceship_officer"
+	item_color = "spaceship_officer"
+
+/obj/item/clothing/under/f13/spaceship/remofficer
+	name = "officer uniform"
+	desc = "The uniform of a Remnant Officer."
+	icon_state = "remofficer"
+	item_color = "remofficer"
+
+/obj/item/clothing/under/f13/spaceship/repcaptain
+	name = "Captain's uniform"
+	desc = "The uniform of a Republic Captain."
+	icon_state = "captainsuit2"
+	item_color = "captainsuit2"

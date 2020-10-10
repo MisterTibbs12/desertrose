@@ -148,21 +148,21 @@
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/SPC
-    name = "(E-3) Private First Class rank pins"
-    desc = "A Specialist should wear this."
+    name = "(E-4) Corporal rank pins"
+    desc = "A Corporal should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/TPR
-    name = "(E-3) Private First Class rank pins"
+    name = "(E-3) Trooper rank pins"
     desc = "A trooper should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
     minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/ncr/REC
-    name = "(E-2) Private rank pins"
+    name = "(E-2) Recruit rank pins"
     desc = "A recruit should wear this."
     icon_state = "ncrenlisted"
     item_color = "ncrenlisted"
@@ -459,12 +459,6 @@
 	desc = "An armband, worn NCR troopers who are trained in and can perform first aid."
 	icon_state = "medblueband"
 	item_color = "medblueband"
-
-/obj/item/clothing/accessory/armband/remnant
-	name = "remnant armband"
-	desc = "An armband signifying allegiance to the Enclave, worn by all members."
-	icon_state = "remnant"
-	item_color = "remnant"
 
 //////////////
 //OBJECTION!//

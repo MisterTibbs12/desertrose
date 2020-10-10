@@ -219,10 +219,7 @@ GLOBAL_VAR_INIT(collar_number, 0)
 		else
 			to_chat(user, "<span class='warning'>With a click the collar locks!</span>")
 			lock = TRUE
-			if(!ismob(src.loc))
-				return
-			var/mob/M = src.loc
-			if(M.get_item_by_slot(SLOT_NECK) == src)
+			if(SLOT_NECK)
 				item_flags = NODROP
 	return
 
@@ -272,10 +269,3 @@ GLOBAL_VAR_INIT(collar_number, 0)
 	icon_state = "cptpatriotscarf"
 	item_color = "cptpatriotscarf"
 	desc = "A stylish scarf. This one has a camoflage pattern popularized during the great war."
-
-/obj/item/clothing/neck/corditeclamp
-	name = "Cordite Clamps Y-72"
-	desc = "People say having a glass jaw is a bad thing but when that jaw is a RobCo alloy-infused combat facial prosthetic made for the U.S army and the American Elite, they are inclined to think twice about throwing a punch. At least a bare fisted one."
-	icon_state = "corditeclamps"
-	item_color = "corditeclamps"
-	item_state = "corditeclamps"
