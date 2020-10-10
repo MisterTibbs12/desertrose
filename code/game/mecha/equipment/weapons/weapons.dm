@@ -80,6 +80,37 @@
 	fire_sound = 'sound/weapons/laser.ogg'
 	harmful = TRUE
 
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/chinmount
+	equip_cooldown = 20
+	name = "ATST Heavy Laser Cannon"
+	desc = "Standard issue cannon for an ATST."
+	icon_state = "88laser"
+	energy_drain = 0.5
+	projectile = /obj/item/projectile/beam/laser/Imperial
+	fire_sound = 'sound/weapons/laser.ogg'
+	harmful = TRUE
+
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/atstblaster
+	equip_cooldown = 2
+	name = "88i  blaster"
+	desc = "light blaster for an ATST."
+	icon_state = "lightlaser"
+	energy_drain = 0.5
+	projectile = /obj/item/projectile/beam/laser/Imperial
+	fire_sound = 'sound/weapons/blasters/E11.ogg'
+	harmful = TRUE
+
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ewing
+	equip_cooldown = 2
+	name = "E-win blaster cannon"
+	desc = "Fighter-mounted blaster, designed for the E-wing. Unreliable."
+	icon_state = "fighterb"
+	randomspread = 5
+	energy_drain = 0.5
+	projectile = /obj/item/projectile/beam/laser/Imperial
+	fire_sound = 'sound/weapons/blasters/E11.ogg'
+	harmful = TRUE
+
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
 	equip_cooldown = 15
 	name = "\improper CH-LC \"Solaris\" laser cannon"
@@ -340,12 +371,12 @@
 	log_game("[key_name(chassis.occupant)] fired a [src] in [AREACOORD(T)]")
 	addtimer(CALLBACK(F, /obj/item/grenade/flashbang.proc/prime), det_time)
 
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang/clusterbang //Because I am a heartless bastard -Sieve //Heartless? for making the poor man's honkblast? - Kaze
-	name = "\improper SOB-3 grenade launcher"
-	desc = "A weapon for combat exosuits. Launches primed clusterbangs. You monster."
-	projectiles = 3
-	projectile = /obj/item/grenade/clusterbuster
-	projectile_energy_cost = 1600 //getting off cheap seeing as this is 3 times the flashbangs held in the grenade launcher.
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang/thermallauncher
+	name = "Concussion launcher"
+	desc = "A weapon firing concussion grenades, good for bunker busting."
+	projectiles = 1
+	projectile = /obj/item/grenade/syndieminibomb/concussion/launchedthermal
+	projectile_energy_cost = 0 //getting off cheap seeing as this is 3 times the flashbangs held in the grenade launcher.
 	equip_cooldown = 90
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar
@@ -430,3 +461,13 @@
 			var/atom/movable/AM = hit_atom
 			AM.safe_throw_at(get_edge_target_turf(AM,get_dir(src, AM)), 7, 2)
 		qdel(src)
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/heavyblaster
+	name = "E-Web VAR-8"
+	desc = "A modification of the popular E-Web, the VAR-8 has reduced firepower in order to be easily mounted on AT-EPs."
+	icon_state = "heavy_laser"
+	equip_cooldown = 10
+	projectile = /obj/item/projectile/beam/laser
+	projectiles = 24
+	projectile_energy_cost = 2
+	harmful = TRUE

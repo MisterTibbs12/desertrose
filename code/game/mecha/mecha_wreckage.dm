@@ -103,7 +103,8 @@
 
 /obj/structure/mecha_wreckage/gygax
 	name = "\improper Gygax wreckage"
-	icon_state = "gygax-broken"
+	icon = 'icons/mecha/mechswbig.dmi'
+	icon_state = "atst-broken"
 
 /obj/structure/mecha_wreckage/gygax/Initialize()
 	. = ..()
