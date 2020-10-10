@@ -32,6 +32,8 @@
 	log_amount = 4
 	obj_integrity = 100
 	max_integrity = 100
+	light_color = LIGHT_COLOR_RED
+
 
 /obj/structure/flora/tree/wasteland/New()
 	icon_state = "deadtree_[rand(1,6)]"
