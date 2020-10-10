@@ -14,23 +14,23 @@ $include antag_rep.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-@SERVERNAME Desert Rose 2
+SERVERNAME SW13 Sands of Mortooine
 ## Napist Note: honestly all the display garbage should be setup to be handled via config, not in their own separate files. cross-ref code/game/world.dm #L245
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
-SERVERSQLNAME fo13sql
+SERVERSQLNAME sw13som
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Mojave Wasteland
+STATIONNAME Mortooine
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
 
 ## Uncomment and set the config in tools/discord/config.yml to enable sending stuff to discord's webhooks
-#USING_DISCORD
+USING_DISCORD
 
 ## Uncomment to allow users to send discord messages to ooc, requires a bot and a comms_key
-#USING_DISCORD_OOC
+USING_DISCORD_OOC
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 160
@@ -58,7 +58,7 @@ LOAD_LEGACY_RANKS_ONLY
 #BAN_LEGACY_SYSTEM
 
 ## Comment this out to stop locally connected clients from being given the almost full access !localhost! admin rank
-#ENABLE_LOCALHOST_RANK
+ENABLE_LOCALHOST_RANK
 
 ## Uncomment this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
@@ -68,7 +68,7 @@ LOAD_LEGACY_RANKS_ONLY
 #USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
-USE_ROLE_WHITELIST
+#USE_ROLE_WHITELIST
 
 ## Uncomment the following line to enable the database custom items system.  You will also need the table from custom_items.sql in the SQL directory.
 USE_CUSTOM_ITEMS_FROM_DB
@@ -167,7 +167,7 @@ ALLOW_VOTE_RESTART
 #ALLOW_VOTE_MODE
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
-VOTE_DELAY 18000
+VOTE_DELAY 6000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
 VOTE_PERIOD 600
@@ -226,7 +226,7 @@ ALLOW_WEBCLIENT
 # SERVER ss13.example.com:2506
 
 ## forum address
-DISCORDURL https://discord.gg/NGpP36m
+DISCORDURL https://discord.gg/KTTdVd
 
 ## Wiki address
 WIKIURL https://desert-rose-fallout-13.fandom.com/wiki/Desert_Rose_-_Fallout_13_Wiki
